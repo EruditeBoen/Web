@@ -1,0 +1,359 @@
+@import url('https://fonts.googleapis.com/css2?family=Brygada+1918:ital@1&family=Lobster&family=Pacifico&family=Potta+One&family=Press+Start+2P&display=swap');
+body {
+    margin: 0px;
+    background: #5d75ff;
+    overflow: hidden;
+}
+:root{
+    --main-color: rgb(255, 251, 0);
+}
+#nav {
+    overflow: hidden;
+}
+#container {
+    width: 100%;
+    position: absolute;
+    top: -100%;
+    animation: anim 2s forwards 2.5s;
+}
+#logo {
+    float: left;
+    margin-left: 100px;
+    margin-top: -40px;
+}
+#logo img {
+    width: 200px;
+}
+#menu ul li a i {
+    position: relative;
+    top: 2px;
+}
+#menu {
+    font-family: 'Lobster', cursive;
+    font-size: 24px;
+    color: white;
+    letter-spacing: 2px;
+    margin-right: 150px;
+    margin-top: 20px;
+    float: right;
+}
+#menu ul {
+    list-style: none;
+}
+#menu ul li {
+    display: inline-block;
+    margin-left: 100px;
+}
+#main {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    overflow: hidden;
+}
+ul {
+    display: block;
+    text-align: center;
+    margin: 0 auto;
+    padding: 0;
+    width: 100%;
+    min-width: 535px;
+    position: relative;
+}
+ul:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.5;
+}
+li {
+    margin: 0 auto;
+    display: inline-block;
+    list-style: none;
+    padding: 0;
+}
+a {
+    display: block;
+    padding: 25px;
+    text-transform: uppercase;
+    position: relative;
+    z-index: 2;
+    text-shadow: 1px 0px rgba(0, 0, 0, .4);
+    color: white;
+    letter-spacing: 0.2em;
+    text-decoration: none;
+    transition: color 200ms;
+    transform-style: preserve-3d;
+}
+a:hover {
+    color: #9ca7b3;
+}
+a:after {
+    content: attr(data-title);
+    position: absolute;
+    display: block;
+    text-shadow: none;
+    width: 78px;
+    height: 13px;
+    top: 37%;
+    left: 22px;
+    padding: 5px 7px;
+    color: transparent;
+    background: #FF316E;
+    transform-origin: 50% 0%;
+    backface-visibility: hidden;
+    transform: translate3d(0px, 105%, 0px) rotateX(-112deg);
+    transform-style: preserve-3d;
+    transition: all 200ms ease;
+    z-index: -1;
+}
+#contact{
+    color: #FF316E;
+}
+li:nth-child(2) a:after {
+    background: #FF316E;
+    width: 96px;
+}
+li:nth-child(3) a:after {
+    background: #FF316E;
+    width: 91px;
+}
+li:nth-child(4) a:after {
+    background: #FF316E;
+    width: 139px;
+
+}
+li:nth-child(5) a:after {
+    background: #FF316E;
+    width: 19px;
+
+}
+a:hover:after {
+    transform: rotateX(0deg) translateZ(0px);
+}
+@keyframes anim {
+    from {
+        top: -100%;
+    }
+    to {
+        top: 0%;
+    }
+}
+
+form {
+    width: 90%;
+    max-width: 600px;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+form span{
+    color:rgb(255, 0, 0);
+}
+
+.input-group {
+    margin-bottom: 30px;
+    position: relative;
+}
+input, textarea{
+    width: 100%;
+    padding: 10px;
+    outline: 0;
+    border: 1px solid var(--main-color);
+    color: var(--main-color);
+    background: transparent;
+    font-size: 15px;
+}
+label{
+    height: 100%;
+    position: absolute;
+    top: -6px;
+    padding: 10px;
+    color: var(--main-color);
+    cursor: text;
+    transition: 0.2s;
+}
+#emails {
+    position: relative;
+    bottom: 100%;
+}
+#names {
+    position: relative;
+    right: 160%;
+    width: 46%;
+    animation: names 1s forwards 3.5s;
+}
+#numbers{
+    position: relative;
+    width: 46%;
+    left: 160%;
+    animation: numbers 1s forwards 3.5s;
+}
+#messages {
+    position: relative;
+    left: 210%;
+    animation: messages 1s forwards 2.5s;
+}
+button {
+    position: relative;
+    right: 220%;
+    animation: button 1s forwards 2s;
+}
+
+button {
+    padding: 10px 0;
+    color: var(--main-color);
+    outline: none;
+    background: transparent;
+    border: 1px solid var(--main-color);
+    width: 104%;
+    cursor: pointer;
+}
+
+input:focus~label, 
+input:valid~label,
+textarea:focus~label,
+textarea:valid~label{
+    top: -35px;
+    font-size: 14px;
+}
+.row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.row input-group {
+    flex-basis: 48%;
+}
+
+@keyframes names {
+    from {
+        right: 160%;
+    }
+    to {
+        right: 0%;
+    }
+}
+
+@keyframes numbers {
+    from{
+        left: 160%;
+    }
+    to {
+        left: 0%;
+    }
+}
+@keyframes emails {
+    from {
+        bottom: 400px;
+    }
+    top {
+        bottom: 0px;
+    }
+}
+@keyframes messages {
+    from {
+        left: 210%;
+    }
+    to {
+        left: 0%;
+    }
+}
+@keyframes button {
+    from {
+        right: 220%;
+    }
+    to {
+        right: 0%;
+    }
+}
+
+.hamburger div{
+    width: 30px;
+    height:3px;
+    background: #f2f5f7;
+    margin: 5px;
+    transition: all 0.3s ease;
+}
+.hamburger{
+    display: none;
+}
+
+/*Stying for small screens*/
+@media screen and (max-width: 1587px){
+    nav{
+        position: fixed;
+        z-index: 3;
+    }
+    .hamburger{
+        display:block;
+        position: absolute;
+        cursor: pointer;
+        right: 5%;
+        top: 5%;
+        transform: translate(-5%, -50%);
+        z-index: 2;
+        transition: all 0.7s ease;
+    }
+    .nav-links{
+        position: fixed;
+        background: #131418;
+        height: 100vh;
+        width: 100%;
+        flex-direction: column;
+        clip-path: circle(50px at 90% -20%);
+        -webkit-clip-path: circle(50px at 90% -10%);
+        transition: all 1s ease-out;
+        pointer-events: none;
+    }
+    .nav-links.open{
+        clip-path: circle(-11000px at 90% -10%);
+        -webkit-clip-path: circle(1000px at 90% -10%);
+        pointer-events: all;
+    }
+    .nav-links li{
+        opacity: 0;
+    }
+    .nav-links li:nth-child(1){
+        transition: all 0.5s ease 0.2s;
+    }
+    .nav-links li:nth-child(2){
+        transition: all 0.5s ease 0.4s;
+    }
+    .nav-links li:nth-child(3){
+        transition: all 0.5s ease 0.6s;
+    }
+    .nav-links li:nth-child(4){
+        transition: all 0.5s ease 0.7s;
+    }
+    .nav-links li:nth-child(5){
+        transition: all 0.5s ease 0.8s;
+    }
+    .nav-links li:nth-child(6){
+        transition: all 0.5s ease 0.9s;
+        margin: 0;
+    }
+    .nav-links li:nth-child(7){
+        transition: all 0.5s ease 1s;
+        margin: 0;
+    }
+    li.fade{
+        opacity: 1;
+    }
+}
+/*Animating Hamburger Icon on Click*/
+.toggle .line1{
+    transform: rotate(-45deg) translate(-5px,6px);
+}
+.toggle .line2{
+    transition: all 0.7s ease;
+    width:0;
+}
+.toggle .line3{
+    transform: rotate(45deg) translate(-5px,-6px);
+}

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delectables | Contact |</title>
+    <link rel="stylesheet" href="hover.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+    <link rel="stylesheet" href="contact.css">
+    <link rel="icon" href="My project (1) (1).png">
+    <link rel="stylesheet" href="navbar.css">
+</head>
+<body>
+    <div id="nav">
+        <button id="menu-toggler" data-class="menu-active" class="hamburger">
+            <span class="hamburger-line hamburger-line-top"></span>
+            <span class="hamburger-line hamburger-line-middle"></span>
+            <span class="hamburger-line hamburger-line-bottom"></span>
+          </button>
+        <div id="container">
+            <div id="logo">
+                <img src="Delect bles.png">
+            </div>
+            <div id="menu">
+                <ul id="primary-menu" class="menu nav-menu">
+                    <li><a href="index.html">HOME<i class='bx bxs-home'></i></a></li>
+                    <li><a href="about.html">ABOUT<i class='bx bxs-info-circle'></i></a></li>
+                    <li><a href="store.html">STORE<i class='bx bxs-store'></i></a></li>
+                    <li><a href="contact.html" id="contact">CONTACT<i class='bx bxs-phone'></i></a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <form action="">
+        <div class="row">
+            <div class="input-group" id="names">
+                <input type="text" id="name" required>
+                <label for="name"><i class="fas fa-user"></i> Name<span>*</span></label>
+            </div>
+            <div class="input-group" id="numbers">
+                <input type="text" id="number">
+                <label for="number"><i class="fas fa-phone-square-alt"></i> Phone No.<span>(optional)</span></label>
+            </div>
+        </div>
+        <div class="input-group" id="emails">
+            <input type="text" id="email" required>
+            <label for="email"><i class="fas fa-user"></i> Email<span>*</span></label>
+        </div>
+        <div class="input-group" id="messages">
+            <textarea name="message" rows="8" required></textarea>
+            <label for="message"><i class="fas fa-comments"></i> Message<span>*</span></label>
+        </div>
+        <button type="submit">SEND <i class="fas fa-paper-plane"></i></button>
+    </form>
+    <script src="navbar.js"></script>
+</body>
+</html>
